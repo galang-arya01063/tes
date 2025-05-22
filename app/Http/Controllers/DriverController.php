@@ -2,20 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Armada;
+
 use App\Models\Driver;
 use Illuminate\Http\Request;
+use function view;
 
 class DriverController extends Controller
 {
     public function index()
     {
-        $drivers = \App\Models\Driver::all(); // Fetch semua data dari tabel driver tes github
-        // $drivers = Driver::all(); // Fetch semua data dari tabel driver
-        // $drivers = Driver::with('armada')->get(); // Fetch semua data dari tabel driver dengan relasi armada
-        // $drivers = Driver::with('armada')->paginate(10); // Fetch data dengan pagination
+        $drivers = \App\Models\Driver::all(); // Fetch semua data dari tabel driver
+<<<<<<< HEAD
+
+=======
+>>>>>>> parent of 2de33c3 (second commit)
         return view('driver.index', compact('drivers'));
     }
+
     public function create()
     {
         return view('driver.create');

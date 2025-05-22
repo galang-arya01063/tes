@@ -12,6 +12,8 @@ class DriverController extends Controller
     {
         $drivers = \App\Models\Driver::all(); // Fetch semua data dari tabel driver tes github
         // $drivers = Driver::all(); // Fetch semua data dari tabel driver
+        // $drivers = Driver::with('armada')->get(); // Fetch semua data dari tabel driver dengan relasi armada
+        // $drivers = Driver::with('armada')->paginate(10); // Fetch data dengan pagination
         return view('driver.index', compact('drivers'));
     }
     public function create()

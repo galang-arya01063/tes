@@ -11,7 +11,6 @@ class DriverController extends Controller
     public function index()
     {
         $drivers = \App\Models\Driver::all(); // Fetch semua data dari tabel driver tes github
-        // Fetch semua data dari tabel driver tes github
         // $drivers = Driver::all(); // Fetch semua data dari tabel driver
         return view('driver.index', compact('drivers'));
     }
